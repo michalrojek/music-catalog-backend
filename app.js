@@ -87,9 +87,17 @@ app.get('*', function(req, res, next){
 let users = require('./routes/users');
 let artists = require('./routes/artists');
 let bands = require('./routes/bands');
+let albums = require('./routes/albums');
+let genres = require('./routes/genres');
+let editions = require('./routes/editions');
+let albumTypes = require('./routes/albumTypes');
 app.use('/users', users);
 app.use('/artists', artists);
 app.use('/bands', bands);
+app.use('/albums', albums);
+app.use('/genres', genres);
+app.use('/editions', editions);
+app.use('/albumtypes', albumTypes);
 
 // Start Server
 app.listen(3000, function(){

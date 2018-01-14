@@ -1,3 +1,4 @@
+
 let mongoose = require('mongoose');
 
 let albumSchema = mongoose.Schema({
@@ -8,9 +9,25 @@ let albumSchema = mongoose.Schema({
     releaseDate:{
         type: String
     },
+    length:{
+        type: String
+    },
+    tracks:{
+        type: Array
+    },
     idArtist:{
-        type: String,
+        type: mongoose.SchemaTypes.ObjectId,
         required: true
+    },
+    idAlbumType:{
+        type: mongoose.SchemaTypes.ObjectId,
+        required: true
+    },
+    idGenres:{
+        type: Array
+    },
+    idEditions:{
+        type: Array
     }
 });
 
